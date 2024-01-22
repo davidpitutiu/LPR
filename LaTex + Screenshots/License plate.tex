@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[latin1]{inputenc}
+
+\title{License Plate Recognition}
+\author{Pitutiu Ioan-David}
+\date{12/01/2024}
+
+\begin{document}
+\maketitle
+
+\section*{Descriere}
+Aplicatia are ca scop de baza identificarea placutelor de inmatriculare din imagini si extragerea textului. Principalele functionalitati sunt:
+
+\begin{enumerate}
+  \item Utilizatorii au posibilitatea de a incarca imagini cu placute de inmatriculare foarte usor.
+  \item Dupa incarcare, aplicatia detecteaza automat placutele si extrage textul.
+  \item Informatiile extrase, dar si numarul de inmatriculare, sunt prezentate intr-un mod clar utilizatorilor.
+\end{enumerate}
+
+\section*{Problema Rezolvata cu Ajutorul Inteligentei Artificiale}
+Aceasta aplicatie permite identificarea placutelor de inmatriculare si extragerea textului din imagini utilizand inteligenta artificiala.
+
+\section*{Caracteristici}
+\begin{enumerate}
+  \item Eficienta si Precizie: Folosind algoritmi de invatare automata, procesul ofera rezultate rapide in identificarea si extragerea textului de pe placutele de inmatriculare.
+  \item Reducerea Erorilor Umane: Elimina erorile care apar in timpul procesului manual de extragere a textului.
+\end{enumerate}
+
+\section*{Lucrari Conexe si Tehnologii Utile}
+\begin{enumerate}
+  \item Relele Neuronale Pre-antrenate: Pentru a detecta placutele in imagini, este folosit modelul InceptionResNetV2.
+  \item Tehnici de Preprocesare a Imaginilor: Datele imaginilor sunt normalizate si redimensionate pentru a le utiliza eficient.
+  \item Framework-uri si Biblioteci: Am utilizat biblioteci precum TensorFlow si OpenCV pentru manipularea eficienta a imaginilor si pentru a implementa algoritmului.
+\end{enumerate}
+
+\section*{Algoritm Inteligent cu Set Mic de Date}
+Pentru identificarea si extragerea textului de pe placutele de inmatriculare, am utilizat un algoritm bazat pe invatare automata. Acesta utilizeaza un set de date restrans si functioneaza dupa urmatorii pasi:
+
+\subsection*{Preprocesarea Datelor}
+Imaginele din setul de date sunt preprocesate pentru a le pregati pentru antrenarea algoritmului. Acest proces include:
+
+\begin{enumerate}
+  \item Redimensionarea si Normalizarea Imaginilor: Imaginile sunt redimensionate la o dimensiune specifica si normalizate pentru a facilita procesul de antrenament al modelului.
+  \item Etichetarea si Pregatirea Datelor de Intrare: Coordonatele placutelor de inmatriculare din imagini sunt marcate si pregatite impreuna cu imaginile corespunzatoare pentru a crea setul de date de intrare pentru algoritm.
+\end{enumerate}
+
+\subsection*{Antrenarea Modelului}
+Pentru identificarea si extragerea textului de pe placutele de inmatriculare, s-a utilizat o arhitectura de retea neuronal, in special InceptionResNetV2.
+
+\begin{enumerate}
+  \item Utilizarea Retelei Neuronale Pre-antrenate: Modelul InceptionResNetV2 este pre-antrenat pe un set mare de date si adaptat pentru a recunoaste si extrage textul de pe placutele de inmatriculare.
+  \item Optimizarea si Antrenarea Modelului: Modelul este antrenat folosind setul de date pregatit, ajustandu-se parametrii pentru a obtine o precizie si performanta cat mai bune.
+\end{enumerate}
+
+Setul de date este creat descarcand imagini de pe internet, folosind labelImg si combinandu-le cu alte seturi de date precum: \texttt{https://github.com/RobertLucian/license-plate-dataset.git}, \texttt{https://www.kaggle.com/datasets/andrewmvd/car-plate-detection}.
+
+\section*{Impactul Social}
+Aplicatia poate avea un impact pozitiv asupra societatii, deoarece poate reduce erorile umane in detectarea placutelor de inmatriculare si poate fi folosita in aplicarea legilor si reducerea traficului rutier. Algoritmul foloseste pentru invatare poze preluate de pe internet, dar si poze realizate in viata de zi cu zi, pentru a oferi o acuratete cat mai mare.
+
+\section*{Imbunatatiri}
+Am implementat functionalitatea de extragere a textului utilizand pytesseract si, in practica, aceasta functioneaza in mare parte din timp daca placuta de inmatriculare este identificata corect.
+\end{document}
